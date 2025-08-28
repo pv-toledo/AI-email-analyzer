@@ -15,6 +15,7 @@ import { ArrowLeft, Copy } from "lucide-react";
 import { Textarea } from "./ui/textarea";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { ThemeToggler } from "./theme-toggler";
 
 type ResultsDisplayProps = {
   results: AIResponse[];
@@ -28,7 +29,10 @@ export function ResultsDisplay({ results, onReset }: ResultsDisplayProps) {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen relative">
+      <div className="absolute top-4 right-4 z-10">
+        <ThemeToggler />
+      </div>
       <div className="flex mx-auto px-5 pb-40 mt-10 max-w-4xl lg:px-0">
         <div className="flex flex-col gap-10 w-full animate-in fade-in duration-300 lg:gap-15 lg:mt-10">
           <div className="flex flex-col gap-5">
@@ -38,7 +42,7 @@ export function ResultsDisplay({ results, onReset }: ResultsDisplayProps) {
               className="flex items-center gap-2 w-fit cursor-pointer lg:-ml-3"
             >
               <ArrowLeft className="lg:!h-5 lg:!w-5" />
-              <span className="font-medium text-black lg:text-lg">Voltar</span>
+              <span className="font-medium lg:text-lg">Voltar</span>
             </Button>
             <h1 className="text-3xl font-bold text-center lg:text-left lg:text-4xl">
               Resultados da Análise

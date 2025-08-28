@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import { ReactQueryProvider } from "@/contexts/react-query-provider";
 import { cn } from "@/lib/utils";
+import { ThemeProvider } from "@/contexts/theme-provider";
 
 const interSans = Inter({
   variable: "--font-inter-sans",
@@ -14,8 +15,8 @@ export const metadata: Metadata = {
   title: "Analisador de emails",
   description: "Aumente a produtividade do seu time com o poder da IA",
   icons: {
-    icon: "/favicon.svg"
-  }
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -24,11 +25,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn("flex size-full flex-col antialiased", interSans.variable)}>
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body
+        className={cn(
+          "flex size-full flex-col antialiased",
+          interSans.variable
+        )}
+      >
         <ReactQueryProvider>
-          {children}
-          <Toaster />
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+            <Toaster />
+          </ThemeProvider>
         </ReactQueryProvider>
       </body>
     </html>

@@ -16,6 +16,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form";
 import { HelpButton } from "./help-button";
+import { ThemeToggler } from "./theme-toggler";
 
 type EmailInputFormProps = {
   onSubmit: (data: MutationInput) => void;
@@ -93,6 +94,9 @@ export function EmailInputForm({
 
   return (
     <main className="min-h-screen px-5 flex items-center justify-center lg:px-0">
+      <div className="absolute top-4 right-4 z-10">
+        <ThemeToggler />
+      </div>
       <div className="flex mx-auto max-w-2xl w-full">
         <div className="flex flex-col gap-8 w-full animate-in fade-in duration-300 ">
           <div className="flex flex-col gap-5 text-center">
