@@ -11,8 +11,11 @@ const interSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Email classifier",
-  description: "Use AI to keep productivity high",
+  title: "Analisador de emails",
+  description: "Aumente a produtividade do seu time com o poder da IA",
+  icons: {
+    icon: "/favicon.svg"
+  }
 };
 
 export default function RootLayout({
