@@ -15,6 +15,7 @@ import z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "./ui/form";
+import { HelpButton } from "./help-button";
 
 type EmailInputFormProps = {
   onSubmit: (data: MutationInput) => void;
@@ -114,13 +115,13 @@ export function EmailInputForm({
                     onValueChange={(value) =>
                       form.setValue("activeTab", value as "text" | "file")
                     }
-                    className="space-y-8"
+                    className="flex flex-col gap-8"
                   >
                     <TabsList className="grid w-full grid-cols-2">
                       <TabsTrigger value="text">Email único</TabsTrigger>
                       <TabsTrigger value="file">Arquivo em Lote</TabsTrigger>
                     </TabsList>
-                    <div className="h-60">
+                    
                       <TabsContent value="text">
                         <FormField
                           control={form.control}
@@ -130,7 +131,7 @@ export function EmailInputForm({
                               <FormControl>
                                 <Textarea
                                   placeholder="Cole aqui o conteúdo de um e-mail..."
-                                  className="h-60 resize-none"
+                                  className="min-h-60 resize-none"
                                   disabled={isPending}
                                   {...field}
                                 />
@@ -150,7 +151,7 @@ export function EmailInputForm({
                                 <FormControl>
                                   <Label
                                     htmlFor="file-upload"
-                                    className="flex flex-col gap-4 h-60 p-8 text-center border-2 border-dashed rounded-lg hover:border-primary/50 hover:cursor-pointer"
+                                    className="flex flex-col gap-4 min-h-60 p-8 text-center border-2 border-dashed rounded-lg hover:border-primary/50 hover:cursor-pointer"
                                   >
                                     <UploadCloud className="mx-auto h-12 w-12 text-muted-foreground" />
                                     <p className="text-lg font-medium">
@@ -222,8 +223,9 @@ export function EmailInputForm({
                           )}
                         />
                       </TabsContent>
-                    </div>
+                    
                   </Tabs>
+            
                   {error && (
                     <Alert variant="destructive" className="mt-4">
                       <AlertCircle className="h-4 w-4" />
@@ -255,6 +257,7 @@ export function EmailInputForm({
           </Card>
         </div>
       </div>
+      <HelpButton />
     </main>
   );
 }

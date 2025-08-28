@@ -72,7 +72,7 @@ export function ResultsDisplay({ results, onReset }: ResultsDisplayProps) {
                       id="emailResponse"
                       value={result.suggested_response}
                       readOnly
-                      className="max-h-[200px] resize-none"
+                      className="resize-none"
                     />
                   </div>
                 </CardContent>
