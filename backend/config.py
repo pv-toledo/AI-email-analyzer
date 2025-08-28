@@ -10,5 +10,5 @@ if not GOOGLE_API_KEY:
 
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://ai-email-analyzer.vercel.app"
+    "https://ai-email-analyzer.vercel.app"
 ]
