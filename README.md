@@ -8,6 +8,8 @@ Esta é uma aplicação web full-stack desenvolvida para automatizar a análise 
 
 A aplicação permite que o usuário envie um único e-mail ou um arquivo em lote (`.csv`/`.xlsx`) e receba a classificação do email e uma sugestão de resposta, otimizando o fluxo de trabalho e liberando tempo da equipe.
 
+***Observação***: o arquivo .csv ou .xlsx eve conter uma única coluna com o cabeçalho `texto_do_email`. No arquivo csv, texto de cada linha **deve estar entre aspas**.
+
 Este repositório é um **monorepo**, contendo tanto o backend quanto o frontend da aplicação em pastas separadas.
 
 ## Arquitetura e Stack de Tecnologias
