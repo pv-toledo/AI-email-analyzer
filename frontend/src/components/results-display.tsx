@@ -51,7 +51,7 @@ export function ResultsDisplay({ results, onReset }: ResultsDisplayProps) {
                 <CardContent>
                   <Accordion type="single" collapsible>
                     <AccordionItem value="original">
-                      <AccordionTrigger className="text-base hover:no-underline">Texto original</AccordionTrigger>
+                      <AccordionTrigger className="text-base cursor-pointer hover:no-underline">Texto original</AccordionTrigger>
                       <AccordionContent>
                         <div className="p-4 bg-muted rounded-lg">
                           <p className="whitespace-pre-wrap text-sm">{result.original_email}</p>
@@ -64,7 +64,7 @@ export function ResultsDisplay({ results, onReset }: ResultsDisplayProps) {
                       <Label htmlFor="emailResponse" className="text-base font-medium">
                         Resposta Sugerida:
                       </Label>
-                      <Button variant="ghost" size="icon" className="w-fit" onClick={() => handleCopyResponse(result.suggested_response)}>
+                      <Button variant="ghost" size="icon" className="w-fit cursor-pointer hover:bg-transparent" onClick={() => handleCopyResponse(result.suggested_response)}>
                         <Copy className="h-4 w-4" />
                       </Button>
                     </div>
