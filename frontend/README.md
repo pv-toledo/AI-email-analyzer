@@ -46,11 +46,11 @@ pnpm install
 2.  Adicione a seguinte variável a ele. Use a URL local para desenvolvimento ou a URL do Render para testar com o backend em produção:
 
     ```
-    # Para desenvolvimento local (backend rodando na sua máquina)
-    NEXT_PUBLIC_API_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
+    # Para desenvolvimento local
+    NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 
-    # Para conectar ao backend em produção (no Render)
-    # NEXT_PUBLIC_API_URL=[https://email-classifier-api-ef03.onrender.com](https://email-classifier-api-ef03.onrender.com)
+    # Para conectar ao backend em produção (Render)
+    # NEXT_PUBLIC_API_URL=https://email-classifier-api-ef03.onrender.com
     ```
 
 ### 4. Rodando o Servidor de Desenvolvimento
