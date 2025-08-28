@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend - AI email analyzer
 
-## Getting Started
+## Stack de Tecnologias
 
-First, run the development server:
+* **Framework:** [Next.js](https://nextjs.org/) (App Router)
+* **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
+* **Gerenciador de Estado de API:** [TanStack Query (React Query)](https://tanstack.com/query/latest)
+* **Componentes UI:** [Shadcn/UI](https://ui.shadcn.com/)
+* **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+* **Validação de Formulários:** [React Hook Form](https://react-hook-form.com/) & [Zod](https://zod.dev/)
+* **Gerenciador de Pacotes:** [pnpm](https://pnpm.io/)
+
+## Features
+
+* Interface de página única (SPA) com alternância de visualização para entrada de dados e resultados.
+* Duas formas de submissão: colar texto de um único e-mail ou fazer upload de um arquivo (`.csv`/`.xlsx`) para processamento em lote.
+* Validação de formulário em tempo real.
+* Feedback visual para estados de carregamento, sucesso e erro.
+* Exibição organizada dos resultados em cards, com opção de copiar a resposta sugerida.
+* Design totalmente responsivo para desktops e dispositivos móveis.
+
+## Como Executar Localmente
+
+Siga os passos abaixo para configurar e rodar o projeto frontend na sua máquina local.
+
+### 1. Pré-requisitos
+
+* [Node.js](https://nodejs.org/en) (versão 18 ou superior)
+* [pnpm](https://pnpm.io/installation) instalado globalmente.
+
+### 2. Instalação
+
+Primeiro, navegue para a pasta do frontend e instale as dependências do projeto usando `pnpm`.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# A partir da raiz do monorepo
+cd frontend
+
+# Instale as dependências
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Configuração das Variáveis de Ambiente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  Na raiz da pasta `/frontend`, crie um arquivo chamado `.env.local`.
+2.  Adicione a seguinte variável a ele. Use a URL local para desenvolvimento ou a URL do Render para testar com o backend em produção:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```
+    # Para desenvolvimento local (backend rodando na sua máquina)
+    NEXT_PUBLIC_API_URL=[http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Learn More
+    # Para conectar ao backend em produção (no Render)
+    # NEXT_PUBLIC_API_URL=[https://email-classifier-api-ef03.onrender.com](https://email-classifier-api-ef03.onrender.com)
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+### 4. Rodando o Servidor de Desenvolvimento
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Com as dependências instaladas e as variáveis de ambiente configuradas, inicie o servidor de desenvolvimento do Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver a aplicação em funcionamento.
