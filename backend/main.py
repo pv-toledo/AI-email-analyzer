@@ -58,7 +58,7 @@ async def process_batch(file: UploadFile = File(...)):
         if file.filename.endswith('.csv'):
             df = pd.read_csv(file_stream, quotechar='"')
         else:
-            df = pd.read_excel(file_stream)
+            df = pd.read_excel(file_stream, engine="openpyxl")
         
         if 'texto_do_email' not in df.columns:
             raise HTTPException(status_code=400, detail="O arquivo deve conter uma coluna chamada 'texto_do_email'.")
