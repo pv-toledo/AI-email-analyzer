@@ -62,5 +62,5 @@ A API estará disponível em `http://127.0.0.1:8000` e a documentação interati
     * **Output:** JSON com a classificação e a resposta sugerida para o e-mail.
 
 * `POST /process-batch`
-    * **Input:** Upload de um arquivo `.csv` ou `.xlsx`. O arquivo deve conter uma única coluna com o cabeçalho `texto_do_email`, onde o texto de cada linha **deve estar entre aspas**.
+    * **Input:** Upload de um arquivo `.csv` ou `.xlsx`. O arquivo deve conter uma única coluna com o cabeçalho `texto_do_email`. No arquivo csv o texto de cada linha **deve estar entre aspas**.
     * **Output:** Uma lista de objetos JSON, cada um contendo o e-mail original, sua classificação e a resposta sugerida.
