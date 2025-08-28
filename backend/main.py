@@ -25,9 +25,7 @@ app = FastAPI(
     description="Processa emails individualmente ou em lote via upload de CSV/Excel para classificação e sugestão de resposta com IA."
 )
 
-origins = [
-    "http://localhost:3000", 
-]
+origins = ALLOWED_ORIGINS
 
 # 3. Adicione o middleware à sua aplicação
 app.add_middleware(
