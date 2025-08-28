@@ -207,7 +207,7 @@ export function EmailInputForm({
                                   <div className="mt-4 pt-4">
                                     <Label
                                       htmlFor="file-upload-replace"
-                                      className="text-sm font-medium text-black cursor-pointer underline"
+                                      className="text-sm font-medium cursor-pointer underline"
                                     >
                                       Trocar arquivo
                                     </Label>

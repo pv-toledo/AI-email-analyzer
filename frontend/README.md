@@ -19,6 +19,8 @@
 * Exibição organizada dos resultados em cards, com opção de copiar a resposta sugerida.
 * Design totalmente responsivo para desktops e dispositivos móveis.
 
+***Observação***: o arquivo .csv ou .xlsx eve conter uma única coluna com o cabeçalho `texto_do_email`. No arquivo csv, texto de cada linha **deve estar entre aspas**.
+
 ## Como Executar Localmente
 
 Siga os passos abaixo para configurar e rodar o projeto frontend na sua máquina local.
