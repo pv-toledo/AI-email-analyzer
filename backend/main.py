@@ -33,6 +33,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/", summary="Verifica que API está ok")
+async def health_check():
+    return {"status": "ok", "message": "API no ar"}
+
 @app.post("/process-single-email")
 async def classify_email(request: EmailRequest):
     logger.info("Endpoint /process-single-email chamado com texto.")
