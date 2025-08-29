@@ -60,7 +60,7 @@ async def process_batch(file: UploadFile = File(...)):
         file_stream = io.BytesIO(contents)
 
         if file.filename.endswith('.csv'):
-            df = pd.read_csv(file_stream, quotechar='"')
+            df = pd.read_csv(file_stream, quotechar='"', encoding='latin-1')
         else:
             df = pd.read_excel(file_stream, engine="openpyxl")
         
