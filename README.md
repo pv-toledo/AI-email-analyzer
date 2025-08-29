@@ -12,6 +12,10 @@ A aplicação permite que o usuário envie um único e-mail ou um arquivo em lot
 
 Este repositório é um **monorepo**, contendo tanto o backend quanto o frontend da aplicação em pastas separadas.
 
+[**Baixar arquivo de exemplo (.csv)**](https://drive.google.com/uc?export=download&id=1H8F9YdEPxVtvUuVbd5dshgvKkjNjN2gd)
+
+[**Baixar arquivo de exemplo (.xlsx)**](https://docs.google.com/spreadsheets/d/1lAImSP4NK0_HttotcaeNzUXDXzr-Z2li/export?format=xlsx)
+
 ## Arquitetura e Stack de Tecnologias
 
 A solução é dividida em dois serviços principais:
