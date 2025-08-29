@@ -77,7 +77,7 @@ export function EmailInputForm({
   };
 
   const handleClearFile = () => {
-    form.setValue("selectedFile", null);
+    form.setValue("selectedFile", null, {shouldValidate: true});
     const fileInput = document.getElementById(
       "file-upload"
     ) as HTMLInputElement;
