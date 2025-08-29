@@ -52,7 +52,7 @@ pnpm install
     NEXT_PUBLIC_API_URL=http://127.0.0.1:8000
 
     # Para conectar ao backend em produção (Render)
-    # NEXT_PUBLIC_API_URL=https://email-classifier-api-ef03.onrender.com
+    # NEXT_PUBLIC_API_URL=https://email-classifier-api-7qpr.onrender.com
     ```
 
 ### 4. Rodando o Servidor de Desenvolvimento

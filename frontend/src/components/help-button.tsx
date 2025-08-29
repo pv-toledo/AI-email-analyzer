@@ -14,7 +14,7 @@ export function HelpButton () {
             <span className="sr-only">Ajuda</span>
           </Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-bottom-1/2 data-[state=closed]:slide-out-to-right-1/2 data-[state=open]:slide-in-from-bottom-1/2 data-[state=open]:slide-in-from-right-1/2 duration-200 dark:border-muted-foreground">
+        <DialogContent className="sm:max-w-md dark:border-muted-foreground">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <HelpCircle className="h-5 w-5" />
